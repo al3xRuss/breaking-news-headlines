@@ -37,11 +37,10 @@
 </style>
 
   <input type="hidden" #selection>
-
-  <div class="card-container">
-    <ul *ngIf="apiData" class="news-list">
-      <li></li>
-      <li *ngFor="let theData of apiData.articles">
+  <i *ngIf="!apiData" class="card-container" [@listStagger]='length'>getting news...</i>
+  <div *ngIf="apiData" class="card-container">
+    <ul [@listStagger]='length' class="news-list">
+      <li *ngFor="let theData of apiData.articles" class="news-list__li">
         <div class="news-block">
           <div class="news-block__image-container" (click)="readMore(theData.url)">
             <img [src]="theData.urlToImage">
