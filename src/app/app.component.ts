@@ -22,4 +22,7 @@ export class AppComponent implements OnInit {
   getData() {
     console.log('check');
   }
+  readMore(path) {
+    window.open(path, '_blank');
+  }
 }
