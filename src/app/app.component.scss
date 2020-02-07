@@ -11,6 +11,15 @@ body {
     margin: 20px;
     background-color: #F5FFF9;
     position: relative;
+    &:hover {
+        background-color: #D1E8D5;
+        /*.news-block__image-container {
+            //
+            img {
+                //
+            }
+        }*/
+    }
     .news-block__image-container {
         width: 200px;
         height: 100%;
@@ -18,11 +27,15 @@ body {
         flex: 200px;
         &:hover {
             height: 100%;
-            width: 100%;
+            width: 700px;
+            flex: 700px;
+            cursor: pointer;
+            position: absolute;
             img {
-                height: 100%;
-                width: auto;
-                left: -50%;
+                width: 700px;
+                height: auto;
+                left: 0px;
+                margin: 0;
                 position: relative;
             }
         }

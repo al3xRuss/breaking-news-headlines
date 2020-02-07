@@ -43,7 +43,7 @@
       <li></li>
       <li *ngFor="let theData of apiData.articles">
         <div class="news-block">
-          <div class="news-block__image-container">
+          <div class="news-block__image-container" (click)="readMore(theData.url)">
             <img [src]="theData.urlToImage">
           </div>
           <div class="news-block__content-container">
